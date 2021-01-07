@@ -1,24 +1,26 @@
 #!/usr/bin/env python3
 
 import rospy
-#from std_msgs.msg import Int32
 from std_msgs.msg import String
 from datetime import datetime
 
 
 rospy.init_node('talker')
-pub = rospy.Publisher('chat', String, queue_size=1) 
-data = String()
-timestamp = rospy.get_time()
-time = datetime.fromtimestamp(timestamp)
-data.data = "hell world(%s)" %time
-rate = rospy.Rate(1)
+pub = rospy.Publisher('message', String, queue_size=1) 
+rate = rospy.Rate(10)
 
-#while not rospy.is_shutdown():
-#    pub.publish(n)
-#    rate.sleep()
+name = input("あなたの名前を入力してください：")
+print("-------------------------------------")
+print("%sさんメッセージツールへようこそ！" %name)
+print("終了するときは 'Ctrl＋C' -> 'Enter'")
+print("--------------------------------------")
 
-rospy.sleep(10)
-pub.publish(data)
-rospy.spin()
+while not rospy.is_shutdown():
+    data = String()
+    timestamp = rospy.get_time()
+    time = datetime.fromtimestamp(timestamp)
+    x = input("文字を入力してね：")
+    data.data = x + ' [%s'%name  + '(%s)]'%time
+    pub.publish(data)
+    rate.sleep()
 
