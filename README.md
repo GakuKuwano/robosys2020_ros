@@ -24,7 +24,7 @@ https://youtu.be/-MeB0o7sv5Q
 # インストール方法
 
 ```bash
-$ cd ~/catkin/src
+$ cd ~/catkin_ws/src
 $ git clone https://github.com/GakuKuwano/robosys2020_ros.git
 ```
 
