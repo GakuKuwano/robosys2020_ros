@@ -6,7 +6,7 @@ ros上でメッセージをGmailで送信するためのソフトウェア（ロ
 
 https://youtu.be/-MeB0o7sv5Q
 
-[![robosys ros](http://img.youtube.com/vi/MeB0o7sv5Q/0.jpg)](https://www.youtube.com/watch?v=-MeB0o7sv5Q "robosys ros")
+[![](https://img.youtube.com/vi/-MeB0o7sv5Q/0.jpg)](https://www.youtube.com/watch?v=-MeB0o7sv5Q)
 
 # 実装内容
 
